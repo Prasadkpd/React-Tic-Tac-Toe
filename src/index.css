@@ -1,13 +1,95 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    font: 24px "Century Gothic", Futura, sans-serif;
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+    height: 80vh;
+    width: 50vh;
+    padding: 20px;
+    background-color: rgb(184, 253, 163);
+    text-align: center;
+    border-radius: 50px;
+}
+
+ol, ul {
+    padding-left: 30px;
+}
+
+.game-info-win {
+    background-color: rgb(223, 235, 226);
+    padding: 20px;
+    font-size: 34px;
+    margin-top: 20px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.board-row:after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.status {
+    margin-bottom: 10px;
+}
+
+.square {
+    background: rgb(177, 175, 175);
+    border: 2px solid rgb(0, 0, 0);
+    float: left;
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 50px;
+    height: 50px;
+    margin-right: -1px;
+    margin-top: -1px;
+    padding: 0;
+    text-align: center;
+    width: 50px;
+}
+
+li button {
+    background-color: rgb(255, 255, 255);
+    width: 20vh;
+    padding: 5px;
+    border-radius: 20px;
+    outline: none;
+}
+
+.square:focus {
+    outline: black;
+}
+
+.square:hover{
+    background-color: rgb(172, 245, 175);
+}
+
+.kbd-navigation .square:focus {
+    background: black;
+}
+
+.game {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.game-info {
+    margin-left: 15px;
+}
+
+.play_again {
+    margin-top: 20px;
+    background-color: white;
+    border: 1px solid rgb(112, 241, 134);
+    border-radius: 20px;
+    padding:10px;
+    font-size: 18px;
 }
